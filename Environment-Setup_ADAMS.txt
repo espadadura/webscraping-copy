@@ -1,0 +1,36 @@
+# create project folder
+$ mkdir myproject   
+#set directory      
+$ cd myproject       
+                        
+# create new env. -- dsp = name of environment
+$ conda create –n dsp python=3.6 keras scikit-learn nltk pandas tensorflow jupyterlab
+
+# activate environment
+$ activate dsp
+
+# deactivate environment
+$ deactivate 
+
+#delete environment
+$ conda remove --name dsp --all 
+
+#export environment
+[dsp] $ conda env export > environment.yaml
+
+#use exported environment
+$ conda env create -f environment.yaml
+
+
+---- 
+
+# create requirement.txt:
+
+conda install ipykernel
+python -m ipykernel install --user --name webscraping-kernel --display-name "Webscraping Workshop"
+
+cd " " 
+python -m pip freeze > requirements.txt  
+
+
+
